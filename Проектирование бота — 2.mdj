@@ -1,0 +1,1563 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGNN66eJ+ISxcA=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model1",
+			"ownedElements": [
+				{
+					"_type": "UMLUseCaseDiagram",
+					"_id": "AAAAAAGNN66eJ+ITH4Y=",
+					"_parent": {
+						"$ref": "AAAAAAGNN66eJ+ISxcA="
+					},
+					"name": "UseCaseDiagram1",
+					"ownedViews": [
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN67akeIXOQs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 144,
+							"top": 376,
+							"width": 128,
+							"height": 48,
+							"text": "Авторизация",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNN6+BauImiEE=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 88,
+							"top": 24,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNN7FkceI8Oxw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 384,
+							"top": 768,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7HfruJHajs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 400,
+							"top": 1088,
+							"width": 217,
+							"height": 32,
+							"text": "Портфель",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7Nxb+J2lyo=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 400,
+							"top": 1136,
+							"width": 104,
+							"height": 32,
+							"text": "Покупка",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7OQ3OJ9xkw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 512,
+							"top": 1136,
+							"width": 104,
+							"height": 32,
+							"text": "Продажа",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN7YdieKbL6I=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 344,
+							"top": 232,
+							"width": 184,
+							"height": 80,
+							"text": "При нажатии на кнопку происходит авторизация на выбранном из нескольких брокеров "
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNN7cJ0eKjRUs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 568,
+							"top": 16,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7c4+eKnjfw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 576,
+							"top": 208,
+							"width": 160,
+							"height": 56,
+							"text": "Выберите брокера через которого вы хотите попасть на биржу\n"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7h4MuK+ITQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 576,
+							"top": 264,
+							"width": 160,
+							"height": 25,
+							"text": "- Тинькофф Инвестиции"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN7kBXOLNdbM=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 576,
+							"top": 288,
+							"width": 160,
+							"height": 25,
+							"text": "- Сбер Инвестиции"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN7lEluLSItY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 848,
+							"top": 112,
+							"width": 192,
+							"height": 100,
+							"text": "После выбора брокера происходит авторизация \nНужно ввести\n-логин \n-пароль\nВвести код \n"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN7pkQeLXAK8=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 520,
+							"top": 632,
+							"width": 176,
+							"height": 96,
+							"text": "После этого попадаем в меню",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN77WEuLkcVU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 856,
+							"top": 328,
+							"width": 176,
+							"height": 96,
+							"text": "Вылетает плашка с удачной или неудачной авторизацией "
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN7+ylOLwXyw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "528:256;567:254"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN7/GfeLzA+k=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "328:280;346:280"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN7/mjeL2onk=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "808:200;849:159"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN7/+FuL5Owc=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "928:208;928:325"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN8AQ7eL8EJU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 688,
+							"top": 496,
+							"width": 112,
+							"height": 48,
+							"text": "Удачная ",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8BCsuMCRLs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "880:416;802:502"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8Bzd+MHDWI=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "712:544;641:630"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8B/kuMKJW4=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "568:720;546:755"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNN8DXpOMUx6s=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 944,
+							"top": 488,
+							"width": 112,
+							"height": 48,
+							"text": "Неудачная",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8D9/+MZdbU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "968:416;995:487"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN8EwkOMhlno=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 920,
+							"top": 624,
+							"width": 176,
+							"height": 96,
+							"text": "Вылетает плашка с повтором входа",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8GWUeMnduQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "992:528;983:622"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNN8KxI+Mvyss=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1088:664;1160:664;1160:368;1032:368"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN8P7MOM5ARk=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 704,
+							"top": 824,
+							"width": 128,
+							"height": 64,
+							"text": "При нажатии на Портфель",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN8RAmuNDW7w=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 696,
+							"top": 1056,
+							"width": 128,
+							"height": 64,
+							"text": "При нажатии на Покупка",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNN8RNv+NIt28=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 448,
+							"top": 1248,
+							"width": 128,
+							"height": 64,
+							"text": "При нажатии на Продажа",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNOmK3i1RWkjU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 976,
+							"top": 816,
+							"width": 200,
+							"height": 72,
+							"text": "Демонстрация всех акций, облигаций, фондов  , валюты",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOmQoX1Rhzh4=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 1264,
+							"top": 664,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOmVAkFRtxz4=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1280,
+							"top": 888,
+							"width": 160,
+							"height": 105,
+							"text": "Содержание портфеля :\n- (название) (колво)"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOmZXwFR2iTE=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1408,
+							"top": 1024,
+							"width": 89,
+							"height": 48,
+							"text": "Назад ",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOmckWFSNjTs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1280,
+							"top": 1024,
+							"width": 96,
+							"height": 48,
+							"text": "Анализ портфеля",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmeMIVSYlGQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "824:856;971:852"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmeX0FSbIrE=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1168:848;1264:861"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOme0WVSe8zU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "696:840;635:931"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmfaoVSjZ9s=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "688:1080;631:1117"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOmh0/1SnsSY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 912,
+							"top": 1016,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmjKSVStnho=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 944,
+							"top": 1176,
+							"width": 136,
+							"height": 51,
+							"text": "Введите название акции/ фонда и его количество"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmmjWVSyxQo=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1072,
+							"top": 1240,
+							"width": 88,
+							"height": 32,
+							"text": "ASTR"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOms21lS2uo0=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 944,
+							"top": 1280,
+							"width": 96,
+							"height": 40,
+							"text": "Введите количество"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmtYJ1S6HmA=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1080,
+							"top": 1320,
+							"width": 80,
+							"height": 32,
+							"text": "5"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmuzn1TCvwI=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 936,
+							"top": 1360,
+							"width": 96,
+							"height": 51,
+							"text": "Операция прошла успешно!"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmwAv1TGvzs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1024,
+							"top": 1360,
+							"width": 80,
+							"height": 48,
+							"text": "Произошла ошибка"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmwp8VTKpT0=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "816:1080;909:1139"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOmxOQlTUohs=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 378,
+							"top": 1394,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTVLLw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 410,
+							"top": 1554,
+							"width": 136,
+							"height": 51,
+							"text": "Введите название акции/ фонда и его количество"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTWr3c=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 538,
+							"top": 1618,
+							"width": 88,
+							"height": 32,
+							"text": "ASTR"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTXZzQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 410,
+							"top": 1658,
+							"width": 96,
+							"height": 40,
+							"text": "Введите количество"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTYNYg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 546,
+							"top": 1698,
+							"width": 80,
+							"height": 32,
+							"text": "5"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTZS9c=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 402,
+							"top": 1738,
+							"width": 96,
+							"height": 51,
+							"text": "Операция прошла успешно!"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOmxOQlTaIxw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 490,
+							"top": 1738,
+							"width": 80,
+							"height": 48,
+							"text": "Произошла ошибка"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmyM+FTn7BM=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "512:1304;491:1397"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOmyXiFTqq4I=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "504:1216;506:1247"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOmy3kFTtAbw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 432,
+							"top": 1784,
+							"width": 112,
+							"height": 40,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOmzdaVT0tzw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 976,
+							"top": 1408,
+							"width": 112,
+							"height": 40,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNOm06WVT+v3M=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1568,
+							"top": 904,
+							"width": 192,
+							"height": 96,
+							"text": "При нажатии на Анализ портфеля \nвылетает две плашки \nНовости компании, Прогнозирование"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnCNYFUDShA=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1504:952;1572:951"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOnEL4VUPvQ8=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 1816,
+							"top": 904,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnFy0FUWFmU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1840,
+							"top": 936,
+							"width": 88,
+							"height": 64,
+							"text": "Введите название акции или фонда"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOnGbBFUaO0w=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1960,
+							"top": 1024,
+							"width": 80,
+							"height": 40,
+							"text": "ASTR"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnJlq1UnGOE=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1832,
+							"top": 1080,
+							"width": 116.15185546875,
+							"height": 48,
+							"text": "Прогнозирование",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnKOO1UrNYY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1880,
+							"top": 1248,
+							"width": 120,
+							"height": 40,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnRhqFU23lU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1752:952;1812:978"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnSqT1U+AtM=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2136,
+							"top": 1096,
+							"width": 120,
+							"height": 64,
+							"text": "Прогнозирование - прогноз состояния акции/фонда"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnVVQFVF+P4=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1952:1104;2129:1121"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnagdlVj7GY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "376:1608;104:1600;104:888;376:896"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOncm+1Vsv3U=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "904:1272;776:1272;776:1176;631:1173"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOndvklVxMEQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1256:728;634:810"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOneP4FV09yo=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1912:896;1912:752;1519:743"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOniKV1WBcFg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 2216,
+							"top": 1344,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOnjuolWHNcQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2224,
+							"top": 1496,
+							"width": 192,
+							"height": 152,
+							"text": "Графики с помощью matplotlib"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnmgAVWMjns=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2280,
+							"top": 1680,
+							"width": 120,
+							"height": 48,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLActorView",
+							"_id": "AAAAAAGNOnqFK1WeMn8=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"model": {
+								"$ref": "AAAAAAGNOnqFK1Wcyq4="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGNOnqFLFWfVbg=",
+									"_parent": {
+										"$ref": "AAAAAAGNOnqFK1WeMn8="
+									},
+									"model": {
+										"$ref": "AAAAAAGNOnqFK1Wcyq4="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGNOnqFLFWgZdo=",
+											"_parent": {
+												"$ref": "AAAAAAGNOnqFLFWfVbg="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 64,
+											"top": 736,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGNOnqFLFWhZ2g=",
+											"_parent": {
+												"$ref": "AAAAAAGNOnqFLFWfVbg="
+											},
+											"font": "Arial;13;1",
+											"left": 45,
+											"top": 653,
+											"width": 92.18701171875,
+											"height": 13,
+											"text": "Пользователь"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGNOnqFLFWiSNI=",
+											"_parent": {
+												"$ref": "AAAAAAGNOnqFLFWfVbg="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 64,
+											"top": 736,
+											"width": 80.9072265625,
+											"height": 13,
+											"text": "(from Model1)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGNOnqFLFWjmgw=",
+											"_parent": {
+												"$ref": "AAAAAAGNOnqFLFWfVbg="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 64,
+											"top": 736,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 40,
+									"top": 646,
+									"width": 102.18701171875,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGNOnqFLFWgZdo="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGNOnqFLFWhZ2g="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGNOnqFLFWiSNI="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGNOnqFLFWjmgw="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAGNOnqFLVWkhvA=",
+									"_parent": {
+										"$ref": "AAAAAAGNOnqFK1WeMn8="
+									},
+									"model": {
+										"$ref": "AAAAAAGNOnqFK1Wcyq4="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 32,
+									"top": 368,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAGNOnqFLVWl4Pw=",
+									"_parent": {
+										"$ref": "AAAAAAGNOnqFK1WeMn8="
+									},
+									"model": {
+										"$ref": "AAAAAAGNOnqFK1Wcyq4="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 32,
+									"top": 368,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAGNOnqFLVWmOew=",
+									"_parent": {
+										"$ref": "AAAAAAGNOnqFK1WeMn8="
+									},
+									"model": {
+										"$ref": "AAAAAAGNOnqFK1Wcyq4="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 32,
+									"top": 368,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAGNOnqFLVWn+iQ=",
+									"_parent": {
+										"$ref": "AAAAAAGNOnqFK1WeMn8="
+									},
+									"model": {
+										"$ref": "AAAAAAGNOnqFK1Wcyq4="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 32,
+									"top": 368,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 40,
+							"top": 560,
+							"width": 102.18701171875,
+							"height": 112,
+							"nameCompartment": {
+								"$ref": "AAAAAAGNOnqFLFWfVbg="
+							},
+							"suppressAttributes": true,
+							"suppressOperations": true,
+							"attributeCompartment": {
+								"$ref": "AAAAAAGNOnqFLVWkhvA="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAGNOnqFLVWl4Pw="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAGNOnqFLVWmOew="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAGNOnqFLVWn+iQ="
+							}
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnreiVXKT7c=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "120:552;162:477"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOnuFN1XVkgY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 2576,
+							"top": 1184,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnvpwVXl84M=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2584,
+							"top": 1384,
+							"width": 121,
+							"height": 32,
+							"text": "Квартал ",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnvpwVXmYlc=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2584,
+							"top": 1416,
+							"width": 120,
+							"height": 32,
+							"text": "Год",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnvpwVXnTu8=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2584,
+							"top": 1448,
+							"width": 121,
+							"height": 32,
+							"text": "5 лет",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOnyXgVYB4JU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2200:1152;2208:1264;2574:1270"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOnzlYlYGpOw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2600,
+							"top": 1544,
+							"width": 209,
+							"height": 40,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo5jtFY7Yvg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2152:792;2152:792"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo5lE1Y+l9c=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2080:824;2083:829"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo5mKlZBb5Y=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2048:864;2048:864"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo5n+lZEKUk=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1992:888;1992:888"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo7gaFZJVdg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2568:1328;2068:1309"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOo8WOFZMJoQ=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2208:1648;2200:1640;1992:1640;1992:1353"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOpC41lZR3wk=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2576:1488;2464:1579"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNOpYgc0uEGTc=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2504,
+							"top": 1696,
+							"width": 161.8828125,
+							"height": 120,
+							"text": "Повышение/понижения стоимости портфеля \nчерез выбранный промежуток времени"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOpctQUuRRYU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "2464:1760;2502:1779"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOs5q2K86mjU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2600,
+							"top": 1584,
+							"width": 209,
+							"height": 41,
+							"text": "В главное меню",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOs7JZK9EQUo=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1832,
+							"top": 1288,
+							"width": 209,
+							"height": 43,
+							"text": "В главное меню",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOs+uu69XBqY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 2240,
+							"top": 1744,
+							"width": 209,
+							"height": 43,
+							"text": "В главное меню",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOtn0BozQuNU=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 400,
+							"top": 1032,
+							"width": 217,
+							"height": 40,
+							"text": "Новости",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOtoxRYzZc68=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "400:1048;320:850"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNOtpFlYzcLkI=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 184,
+							"top": 736,
+							"width": 168,
+							"height": 112,
+							"text": "Переход в новостной канал который был нами создан",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOtsWLYzlpYw=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1080,
+							"top": 1832,
+							"width": 144,
+							"height": 40,
+							"text": "Вас интересует сайт или канал?"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOtuKRIzp5jI=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1216,
+							"top": 1896,
+							"width": 120,
+							"height": 40,
+							"text": "Канал"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOtucjIztchA=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1080,
+							"top": 1928,
+							"width": 136,
+							"height": 48,
+							"text": "Вставьте ссылку"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOtu1D4zx6e0=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1200,
+							"top": 1984,
+							"width": 96,
+							"height": 40,
+							"text": "пупа"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGNOtvIwYz1Wgg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1080,
+							"top": 2024,
+							"width": 120,
+							"height": 51,
+							"text": "Хорошо, я буду публиковать новости оттуда"
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGNOtxU/4z6kGk=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"fillColor": "#FFFFFF00",
+							"font": "Arial;13;0",
+							"showShadow": false,
+							"left": 1064,
+							"top": 1712,
+							"width": 248,
+							"height": 448
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGNOtznOI0EhPg=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 1128,
+							"top": 2096,
+							"width": 112,
+							"height": 40,
+							"text": "Назад",
+							"horzAlign": 2,
+							"vertAlign": 5
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGNOueQJY0QCR4=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"left": 768,
+							"top": 1552,
+							"width": 288,
+							"height": 96,
+							"text": "Переход в тг канал с новостями \n+ там свой бот для добавления новостного потока"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOugrwY0VVmc=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "608:1048;838:1553"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGNOug6LY0YSDY=",
+							"_parent": {
+								"$ref": "AAAAAAGNN66eJ+ITH4Y="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "984:1640;1063:1747"
+						}
+					]
+				},
+				{
+					"_type": "UMLActor",
+					"_id": "AAAAAAGNOnqFK1Wcyq4=",
+					"_parent": {
+						"$ref": "AAAAAAGNN66eJ+ISxcA="
+					},
+					"name": "Пользователь"
+				}
+			]
+		}
+	]
+}
