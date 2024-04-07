@@ -4,7 +4,6 @@
 ![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/d6552443-28a6-4014-8ad3-7c2d32ee6cb7)
 Зайти в настройки и разрешить "Подтверждение сделок кодом"
 ![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/16a905e1-fae4-405c-8cc2-633676fe0db1)
-
 И внизу будет "Создать токен"
 ![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/3b07730f-e037-47d7-a587-46a00bad8e7e)
 Выбираем полный доступ и нажимаем на "Выпустить токен"
