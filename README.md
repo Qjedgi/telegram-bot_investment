@@ -8,6 +8,9 @@
 ![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/3b07730f-e037-47d7-a587-46a00bad8e7e)
 Выбираем полный доступ и нажимаем на "Выпустить токен"
 ![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/184a97f1-67ab-4463-b033-476d4bfcc2a5)
+И копируем 
+![изображение](https://github.com/Qjedgi/telegram-bot_investment/assets/109665581/919c72ec-392a-42f6-bb3f-4bbaaa89c402)
+
 Внимание! Если вы выйдете со страницы не сохранив этот токен, вы не сможете снова его скопировать, такая плашка выходит ЕДИНОРАЗОВО.
 
 
