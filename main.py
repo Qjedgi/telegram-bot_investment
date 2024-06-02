@@ -83,7 +83,9 @@ def handle_text(message):
             bot.send_message(message.chat.id, str(e))
 
     elif message.text.strip() == 'Анализ':
-        pass
+        def analyze(message):
+            main()
+            bot.send_message(message.chat.id, "Анализ завершен!")
     elif message.text.strip() == 'Новости':
         # парсер новостей из сайтов и каналов , ссылка на канал
         markup = telebot.types.InlineKeyboardMarkup()
@@ -198,6 +200,34 @@ def delete_images(directory):
 
 #units - Целая часть суммы, может быть отрицательным числом
 #nano - Дробная часть суммы, может быть отрицательным числом
+def main():
+    with Client(token) as client:
+        accounts =  client.users.get_accounts()
+        operations = []
+        for account in accounts.accounts:
+            operations_response = client.operations.get_operations(
+              account_id=account.id,
+              from_=datetime(2023, 9, 1),
+                to=datetime.now()
+            )
+            for operation in operations_response.operations:
+                operations.append({
+                    "type": operation.type,
+                    "payment": operation.payment.units + operation.payment.nano / 10**9
+                })
+        # Группировка и суммирование операций по типу
+        summary = {}
+        for operation in operations:
+            if operation["type"] not in summary:
+                summary[operation["type"]] = 0
+            summary[operation["type"]] += operation["payment"]
+        # Вывод данных в консоль
+        for key, value in summary.items():
+            print(f"{key}: {value}")
+        # Общий итог
+        total = sum(summary.values())
+        print(f"Total: {total}")
+
 bot.infinity_polling()
 #sosihui # lyalyatopolya
 

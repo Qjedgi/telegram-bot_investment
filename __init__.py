@@ -3,9 +3,18 @@ import os
 from datetime import datetime, timedelta
 from tinkoff.invest import AsyncClient
 from dotenv import load_dotenv, find_dotenv
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 
 load_dotenv(find_dotenv())
 TOKEN = os.environ["TOKEN_TINKOFF"]
+
+# Регистрация шрифта Arial
+font_path = r'C:\Windows\Fonts\arial.ttf'  # Обновите этот путь в соответствии с местоположением Arial.ttf на вашем компьютере
+pdfmetrics.registerFont(TTFont('Arial', font_path))
 
 async def main():
     async with AsyncClient(TOKEN) as client:
@@ -22,24 +31,27 @@ async def main():
             for operation in operations_response.operations:
                 operations.append({
                     "type": operation.type,
-                    "payment": operation.payment.units + operation.payment.nano / 10**9
+                    "payment": operation.payment.units + operation.payment.nano / 10 ** 9
                 })
 
-        # Группировка и суммирование операций по типу
+        # Группировка и сводка операций по типу
         summary = {}
         for operation in operations:
             if operation["type"] not in summary:
                 summary[operation["type"]] = 0
             summary[operation["type"]] += operation["payment"]
 
-        # Вывод данных в консоль
-        print("Summary:")
+        # Подготовка содержимого PDF
+        story = []
+        styles = getSampleStyleSheet()
+        russian_style = ParagraphStyle(name='Russian', fontName='Arial', fontSize=12, leading=15)
         for key, value in summary.items():
-            print(f"{key}: {value}")
+            story.append(Paragraph(f"<b>{key}:</b><br/>{value:.2f}", russian_style))
+        story.append(Paragraph("<b>Итого:</b><br/>" + str(sum(summary.values())), russian_style))
 
-        # Общий итог
-        total = sum(summary.values())
-        print(f"Total: {total}")
+        # Генерация отчета PDF
+        doc = SimpleDocTemplate("summary_report.pdf", pagesize=letter)
+        doc.build(story)
 
 if __name__ == "__main__":
     asyncio.run(main())
