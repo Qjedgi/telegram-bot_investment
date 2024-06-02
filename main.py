@@ -11,22 +11,13 @@ bot= telebot.TeleBot(os.getenv('TOKEN_TG'))
 #exchange = os.getenv('TOKEN_TINKOFF')
 acc = os.getenv('TIN_AKK_ID')
 
-@bot.message_handler(commands=["start"])
-def start(m):
-        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1 = types.KeyboardButton("Новости")
-        item2 = types.KeyboardButton("Портфель")
-        markup.add(item1, item2)
-        bot.send_message(m.chat.id,'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций.',  reply_markup=markup)
-
 
 @bot.message_handler(commands=["start"])
 def start(m):
-        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1 = types.KeyboardButton("Авторизация")
-        markup.add(item1,)
-        bot.send_message(m.chat.id,'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <> . После создания токена отправьте его ответным сообщением. ',  reply_markup=markup)
-        bot.register_next_step_handler(m, authorization)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    bot.send_message(m.chat.id, 'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <> . После создания токена отправьте его ответным сообщением.')
+    bot.register_next_step_handler(m, authorization)
+
 def authorization(m):
     global token
     token = m.text
@@ -34,63 +25,16 @@ def authorization(m):
         with Client(token) as client:
             response = client.users.get_accounts()
             if response.accounts:
-                account_id = response.accounts[0].id
-                bot.send_message(m.chat.id, f'Успешный вход на биржу! Ваш ID аккаунта: {account_id}')
+                markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+                item1 = types.KeyboardButton("Новости")
+                item2 = types.KeyboardButton("Портфель")
+                markup.add(item1,item2)
+                bot.send_message(m.chat.id, text='Успешный вход на биржу!', reply_markup=markup)
                 # Здесь можно добавить логику для работы с ботом после авторизации
             else:
                 bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
     except Exception as e:
         bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
-
-# @bot.message_handler(commands=["start"])
-# def start(m):
-#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-#     item1 = types.KeyboardButton("Авторизация")
-#     markup.add(item1,)
-#     bot.send_message(m.chat.id, 'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <> . После создания токена отправьте его ответным сообщением.', reply_markup=markup)
-#     bot.register_next_step_handler(m, authorization)
-#
-# import asyncio
-# from tinkoff.invest import AsyncClient
-#
-# async def authorization(m):
-#     global token
-#     token = m.text
-#     try:
-#         async with AsyncClient(token) as client:
-#             response = await client.users.get_accounts()
-#             if response.accounts:
-#                 account_id = response.accounts[0].id
-#                 bot.send_message(m.chat.id, f'Успешный вход на биржу! Ваш ID аккаунта: {account_id}')
-#                 # Здесь можно добавить логику для работы с ботом после авторизации
-#             else:
-#                 bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
-#     except Exception as e:
-#         bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
-
-import asyncio
-# @bot.message_handler(commands=["start"])
-# async def start(m):
-#     # markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-#     # item1 = types.KeyboardButton("Авторизация")
-#     # markup.add(item1)
-#     bot.send_message(m.chat.id, 'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <>. После создания токена отправьте его ответным сообщением. ')
-#     bot.register_next_step_handler(m, authorization)
-#
-# async def authorization(m):
-#     global token
-#     token = m.text
-#     try:
-#         async with Client(token) as client:
-#             response = await client.users.get_accounts()
-#             if response.accounts:
-#                 account_id = response.accounts[0].id
-#                 bot.send_message(m.chat.id, f'Успешный вход на биржу! Ваш ID аккаунта: {account_id}')
-#                 # Здесь можно добавить логику для работы с ботом после авторизации
-#             else:
-#                 bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
-#     except Exception as e:
-#         bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
 
 # Получение сообщений от юзера
 @bot.message_handler(content_types=["text"])
