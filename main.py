@@ -43,7 +43,7 @@ def handle_text(message):
         try:
             #with Client(exchange) as client:
             with Client(token) as client:
-                r: PortfolioResponse = client.operations.get_portfolio(account_id=acc)
+                r: PortfolioResponse = client.operations.get_portfolio(account_id=client.users.get_accounts().accounts[0].id)
                 df = pd.DataFrame([
                     {
                         'figi': p.figi,
