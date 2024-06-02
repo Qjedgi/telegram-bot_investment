@@ -15,7 +15,7 @@ bot= telebot.TeleBot(os.getenv('TOKEN_TG'))
 @bot.message_handler(commands=["start"])
 def start(m):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    bot.send_message(m.chat.id, 'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <> . После создания токена отправьте его ответным сообщением.')
+    bot.send_message(m.chat.id, 'Привет! Это дипломная работа на тему "Разработка telegram бота для анализа, обработки и выполнения биржевых операций". Данный бот работает напрямую с API Тинькофф Инвестиций. Для входа на биржу нужен токен. По этой инстукции можно будет его создать <https://github.com/Qjedgi/telegram-bot_investment/blob/main/README.md>. После создания токена отправьте его ответным сообщением.')
     bot.register_next_step_handler(m, authorization)
 
 def authorization(m):
