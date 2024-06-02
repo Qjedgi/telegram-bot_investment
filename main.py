@@ -9,7 +9,7 @@ from datetime import datetime
 load_dotenv(find_dotenv())
 bot= telebot.TeleBot(os.getenv('TOKEN_TG'))
 #exchange = os.getenv('TOKEN_TINKOFF')
-acc = os.getenv('TIN_AKK_ID')
+#acc = os.getenv('TIN_AKK_ID')
 
 
 @bot.message_handler(commands=["start"])
@@ -105,7 +105,7 @@ def qnty_buy(message):
                 order_id=str(datetime.utcnow().timestamp()),
                 figi=figi_value,
                 quantity=int(qnty_value),
-                account_id=acc,
+                account_id=client.users.get_accounts().accounts[0].id,
                 direction=OrderDirection.ORDER_DIRECTION_BUY,
                 order_type=OrderType.ORDER_TYPE_MARKET
                 )
@@ -132,7 +132,7 @@ def qnty_sale(message):
                 order_id=str(datetime.utcnow().timestamp()),
                 figi=figi_value,
                 quantity=int(qnty_value),
-                account_id=acc,
+                account_id=client.users.get_accounts().accounts[0].id,
                 direction=OrderDirection.ORDER_DIRECTION_SELL,
                 order_type=OrderType.ORDER_TYPE_MARKET
             )
