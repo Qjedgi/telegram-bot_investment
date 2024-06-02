@@ -1,11 +1,14 @@
 import requests
 import telebot
 from telebot import types
-from tinkoff.invest import Client, PortfolioResponse, RequestError,OrderDirection, OrderType
+from tinkoff.invest import Client, PortfolioResponse, RequestError,OrderDirection, OrderType, CandleInterval, HistoricCandle
 import os
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
+import matplotlib.pyplot as plt
+from ta.trend import ema_indicator
+from pandas import DataFrame
 load_dotenv(find_dotenv())
 bot= telebot.TeleBot(os.getenv('TOKEN_TG'))
 #exchange = os.getenv('TOKEN_TINKOFF')
@@ -30,6 +33,7 @@ def authorization(m):
                 item2 = types.KeyboardButton("Портфель")
                 markup.add(item1,item2)
                 bot.send_message(m.chat.id, text='Успешный вход на биржу!', reply_markup=markup)
+                delete_images("D:\\Рабочий стол\\bot")
                 # Здесь можно добавить логику для работы с ботом после авторизации
             else:
                 bot.send_message(m.chat.id, 'Ошибка авторизации. Проверьте токен и повторите попытку.')
@@ -62,15 +66,22 @@ def handle_text(message):
                     for
                     i, row in enumerate(d))
                 bot.send_message(message.chat.id, output)
+                markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+                item1 = types.KeyboardButton("Анализ")
+                item2 = types.KeyboardButton("Покупка")
+                item3 = types.KeyboardButton("Продажа")
+                item4 = types.KeyboardButton("Назад")
+                markup.add(item1).add(item2, item3).add(item4)
+                bot.send_message(message.chat.id,
+                                 text='Также вы можете проанализировать портфель или докупить или продать ценные бумаги',
+                                 reply_markup=markup)
+                for p in r.positions:
+                    figi = p.figi
+                    run(figi)
+
         except RequestError as e:
             bot.send_message(message.chat.id, str(e))
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1 = types.KeyboardButton("Анализ")
-        item2 = types.KeyboardButton("Покупка")
-        item3 = types.KeyboardButton("Продажа")
-        item4 = types.KeyboardButton("Назад")
-        markup.add(item1).add(item2,item3).add(item4)
-        bot.send_message(message.chat.id, text='Также вы можете проанализировать портфель или докупить или продать ценные бумаги', reply_markup=markup)
+
     elif message.text.strip() == 'Анализ':
         pass
     elif message.text.strip() == 'Новости':
@@ -140,8 +151,51 @@ def qnty_sale(message):
     except RequestError as e:
         print(str(e))
 
+def run(figi):
+    try:
+        with Client(token) as client:
+            r = client.market_data.get_candles(
+                figi=figi,
+                from_=datetime.utcnow() - timedelta(days=7),
+                to=datetime.utcnow(),
+                interval=CandleInterval.CANDLE_INTERVAL_HOUR  # см. utils.get_all_candles
+            )
+            # print(r)
+
+            df = create_df(r.candles)
+            # https://technical-analysis-library-in-python.readthedocs.io/en/latest/ta.html#ta.trend.ema_indicator
+            df['ema'] = ema_indicator(close=df['close'], window=9)
+
+            #print(df[['time', 'close', 'ema']].tail(30))
+            ax = df.plot(x='time', y='close')
+            df.plot(ax=ax, x='time', y='ema')
+            fig = ax.get_figure()
+            fig.savefig(f'{figi}.png')
+
+    except RequestError as e:
+        print(str(e))
+
+
+def create_df(candles: [HistoricCandle]):
+    df = DataFrame([{
+        'time': c.time,
+        'volume': c.volume,
+        'open': money(c.open),
+        'close': money(c.close),
+        'high': money(c.high),
+        'low': money(c.low),
+    } for c in candles])
+
+    return df
 def money(a):
     return a.units+a.nano/1e9 # нано -> 10 в -9 степени
+
+def delete_images(directory):
+    for filename in os.listdir(directory):
+        if filename.endswith(".png"):
+            os.remove(os.path.join(directory, filename))
+# пример использования
+
 #units - Целая часть суммы, может быть отрицательным числом
 #nano - Дробная часть суммы, может быть отрицательным числом
 bot.infinity_polling()
