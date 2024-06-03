@@ -2,6 +2,7 @@ import asyncio
 import os
 from datetime import datetime, timedelta
 from tinkoff.invest import AsyncClient
+from tinkoff.invest import Client
 from dotenv import load_dotenv, find_dotenv
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -10,14 +11,13 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 load_dotenv(find_dotenv())
-TOKEN = os.environ["TOKEN_TINKOFF"]
 
 # Регистрация шрифта Arial
 font_path = r'C:\Windows\Fonts\arial.ttf'  # Обновите этот путь в соответствии с местоположением Arial.ttf на вашем компьютере
 pdfmetrics.registerFont(TTFont('Arial', font_path))
 
-async def main():
-    async with AsyncClient(TOKEN) as client:
+async def main(token):
+    async with Client(token) as client:
         accounts = await client.users.get_accounts()
         operations = []
 
@@ -52,6 +52,4 @@ async def main():
         # Генерация отчета PDF
         doc = SimpleDocTemplate("summary_report.pdf", pagesize=letter)
         doc.build(story)
-
-if __name__ == "__main__":
-    asyncio.run(main())
+asyncio.run(main(token))

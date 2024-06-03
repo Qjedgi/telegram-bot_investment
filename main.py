@@ -1,19 +1,20 @@
-import requests
 import telebot
 from telebot import types
 from tinkoff.invest import Client, PortfolioResponse, RequestError,OrderDirection, OrderType, CandleInterval, HistoricCandle
-import os
-from dotenv import load_dotenv, find_dotenv
 import pandas as pd
-from datetime import datetime, timedelta
-import matplotlib.pyplot as plt
 from ta.trend import ema_indicator
 from pandas import DataFrame
+import os
+from datetime import datetime, timedelta
+from tinkoff.invest import Client
+from dotenv import load_dotenv, find_dotenv
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.pagesizes import letter
 load_dotenv(find_dotenv())
 bot= telebot.TeleBot(os.getenv('TOKEN_TG'))
 #exchange = os.getenv('TOKEN_TINKOFF')
 #acc = os.getenv('TIN_AKK_ID')
-
 
 @bot.message_handler(commands=["start"])
 def start(m):
@@ -83,9 +84,15 @@ def handle_text(message):
             bot.send_message(message.chat.id, str(e))
 
     elif message.text.strip() == 'Анализ':
-        def analyze(message):
-            main()
-            bot.send_message(message.chat.id, "Анализ завершен!")
+        bot.register_next_step_handler(message, main)
+        file1 = open('summary_report.pdf', 'rb')
+        bot.send_document(message.chat.id, file1)
+        file1.close()
+        bot.register_next_step_handler(message, images_to_pdf)
+        file = open('output.pdf', 'rb')
+        bot.send_document(message.chat.id, file)
+        file.close()
+
     elif message.text.strip() == 'Новости':
         # парсер новостей из сайтов и каналов , ссылка на канал
         markup = telebot.types.InlineKeyboardMarkup()
@@ -99,7 +106,48 @@ def handle_text(message):
         bot.send_message(message.chat.id, 'Введите figi необходимой бумаги')
         bot.register_next_step_handler(message, figi_sale)
     elif message.text.strip() == 'Назад':
-        bot.register_next_step_handler(message, start(message))
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item1 = types.KeyboardButton("Новости")
+        item2 = types.KeyboardButton("Портфель")
+        markup.add(item1, item2)
+        bot.send_message(message.chat.id, 'Вы вернулись назад',reply_markup=markup)
+
+def main(token):
+    with Client(token) as client:
+        accounts =client.users.get_accounts()
+        operations = []
+
+        for account in accounts.accounts:
+            operations_response = client.operations.get_operations(
+                account_id=account.id,
+                from_=datetime(2023, 9, 1),
+                to=datetime.now()
+            )
+
+            for operation in operations_response.operations:
+                operations.append({
+                    "type": operation.type,
+                    "payment": operation.payment.units + operation.payment.nano / 10 ** 9
+                })
+
+        # Группировка и сводка операций по типу
+        summary = {}
+        for operation in operations:
+            if operation["type"] not in summary:
+                summary[operation["type"]] = 0
+            summary[operation["type"]] += operation["payment"]
+
+        # Подготовка содержимого PDF
+        story = []
+        styles = getSampleStyleSheet()
+        russian_style = ParagraphStyle(name='Russian', fontName='Arial', fontSize=12, leading=15)
+        for key, value in summary.items():
+            story.append(Paragraph(f"<b>{key}:</b><br/>{value:.2f}", russian_style))
+        story.append(Paragraph("<b>Итого:</b><br/>" + str(sum(summary.values())), russian_style))
+
+        # Генерация отчета PDF
+        doc = SimpleDocTemplate("summary_report.pdf", pagesize=letter)
+        doc.build(story)
 def figi_buy(message):
     global figi_value
     figi_value = message.text
@@ -177,6 +225,20 @@ def run(figi):
     except RequestError as e:
         print(str(e))
 
+
+
+from fpdf import FPDF
+
+def images_to_pdf(directory, pdf_filename):
+    pdf = FPDF()
+    for i, file in enumerate(os.listdir(directory)):
+        if file.endswith(".png"):
+            pdf.add_page()
+            pdf.set_font("Arial", size=12)  # Установка шрифта и размера
+            pdf.image(os.path.join(directory, file), x=10, y=10, w=180, h=180)  # Размещение изображения в верхней части страницы
+            prefix = "Image "
+            pdf.cell(0, 30, txt=f"{prefix}{file}", ln=True, align="C")
+    pdf.output(pdf_filename, "F")
 
 def create_df(candles: [HistoricCandle]):
     df = DataFrame([{
