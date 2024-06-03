@@ -1,0 +1,6 @@
+pandas~=1.5.2
+matplotlib~=3.6.2
+tinkoff~=0.1.1
+requests~=2.28.1
+telebot~=0.0.4
+asyncio~=3.4.3
