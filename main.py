@@ -291,7 +291,6 @@ def main():
         print(f"Total: {total}")
 
 bot.infinity_polling()
-#sosihui # lyalyatopolya
 
 
 
